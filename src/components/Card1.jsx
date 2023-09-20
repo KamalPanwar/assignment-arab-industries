@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./Card1.css";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -16,6 +17,7 @@ import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 
 export default function Card1(props) {
   return (
+    <div className="card1-container">
     <Card sx={{  borderRadius: ".5rem", boxShadow: 3 }}>
       <CardContent>
         <Box sx={{  mx: 2 ,height:'100%'}}>
@@ -29,7 +31,6 @@ export default function Card1(props) {
             gutterBottom
           >
             <AttachMoneyOutlinedIcon
-              
               fontSize="inherit"
             />{" "}
             {props.price}
@@ -81,5 +82,6 @@ export default function Card1(props) {
         <Button size="small">Explore Features</Button>
       </CardActions>
     </Card>
+    </div>
   );
 }

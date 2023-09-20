@@ -1,108 +1,152 @@
-:root{
-    --font-size-sm:clamp(.8rem,.17vw+.76rem,.89rem);
-    --font-size-base:clamp(1rem,.34vw+.91rem,1.19rem);
-    --font-size-md:clamp(1.25rem,0.61vw+1.1rem,1.58rem);
-    --font-size-lg:clamp(1.56rem,1vw+1.31rem,2.11rem);
-    --font-size-xl:clamp(1.95rem,1.56vw+1.56rem+2.81rem);
-    --font-size--xxl:clamp(2.44rem,2.38vw+1.85rem,3.75rem);
-    --font-size-xxxl: clamp(3.05rem,3.54vw+2.17rem,5rem)
+:root {
+  --font-size-sm: clamp(0.8rem, 0.17vw+0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw+0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw+1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw+1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw+1.56rem+2.81rem);
+  --font-size--xxl: clamp(2.44rem, 2.38vw+1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw+2.17rem, 5rem);
 }
 *,
 *::after,
-*::before{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+*::before {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-h1{
-    font-size: var(--font-size-xxxl);
+h1 {
+  font-size: var(--font-size-xxxl);
 }
-h2{
-    font-size: var(--font-size-xxl);
+h2 {
+  font-size: var(--font-size-xxl);
 }
-h3{
-    font-size: var(--font-size-xl);
+h3 {
+  font-size: var(--font-size-xl);
 }
-h4{
-    font-size: var(--font-size-lg);
+h4 {
+  font-size: var(--font-size-lg);
 }
-h5{
-    font-size: var(--font-size-md);
+h5 {
+  font-size: var(--font-size-md);
 }
-p{
-    font-size:var(--font-size-base) ;
-}
-
-body{
-    
-    font-family:  Roboto;
- 
-    background: rgb(244,244,244);
-    background: linear-gradient(145deg, rgba(244,244,244,1) 15%, rgba(67,172,226,1) 15%);
-    background-repeat: no-repeat;
- 
-
-    
-
-   
+p {
+  font-size: var(--font-size-base);
 }
 
-.mainContainer{
+body {
+  font-family: Roboto;
+
+  background: rgb(244, 244, 244);
+  background: linear-gradient(
+    145deg,
+    rgba(244, 244, 244, 1) 15%,
+    rgba(67, 172, 226, 1) 15%
+  );
+  background-repeat: no-repeat;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  margin-right: 3rem;
+  background: #f5f6fa;
+}
+.heding-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.heading {
+  margin-left: 7rem;
+  padding: 1rem;
+}
+
+.plancards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 21rem));
+  gap: 2rem;
+  justify-content: center;
+  height: 25rem;
+
+  width: auto;
+}
+.navbar {
+  margin-top: -6.2rem;
+}
+
+/**********************Header ****************************/
+.header-img{
+    width:12%;
+    mix-blend-mode:multiply ;
+    margin-top:-2rem;
+    margin-left:4rem;
+}
+
+@media (max-width: 600px) {
+  .plancards {
+    display: block;
+    width: 90%;
+    margin: 20px;
+  }
+
+  .pricingSection {
+    display: block;
+    height: 340vh;
+  }
+  body {
+    height: 360vh;
+  }
+  .mainContainer {
+    margin-right: 1px;
+  }
+  .heding-div {
     display: flex;
-    flex-direction: row;
-    margin-top: 4rem;
-    margin-right: 3rem;
-    
-    background: #f5f6fa;
-   
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+    padding: 2rem;
+  }
+  .header-img{
+    width:40%;
+    mix-blend-mode:multiply ;
+    margin-top:0;
+    margin-left:0;
+    border-bottom:5px solid rgba(67, 172, 226, 1) ;
+}
 }
 
-.plancards{
-
+/* @media (max-width: 768px) {
+  .plancards {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(5rem,21rem));
-    gap: 2rem;
-    justify-content: center;
-   height: 25rem;
-   
-    width: auto;
-}
-.navbar{
-    margin-top: -6.2rem;
-}
-
-@media (max-width:768px) {
-    .plancards{
-        display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(12rem,16rem));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
     gap: 7rem;
     justify-content: center;
     margin-top: 5rem;
     margin-bottom: 5rem;
     width: auto;
-    }
-}
-@media (max-width:568px) {
-    .plancards{
-        display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(12rem,16rem));
+  }
+} */
+/* @media (max-width: 568px) {
+  .plancards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
     gap: 7rem;
     justify-content: center;
     margin-top: 5rem;
     margin-bottom: 5rem;
     width: auto;
-
-    }
+  }
 }
-@media (max-width:320px) {
-    .plancards{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(12rem,16rem));
-        gap: 7rem;
-        justify-content: center;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        width: auto;
-
-    }
-}
+@media (max-width: 320px) {
+  .plancards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 7rem;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: auto;
+  }
+} */

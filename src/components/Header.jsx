@@ -1,12 +1,14 @@
 import React from 'react'
 import logo from '../utils/logo.jpg'
+import "../App.css";
+
 
 const Header = () => {
   return (
     <div style={{height:'4rem' }}>
       <header>
        
-        <img src={logo} alt="" style={{width:'12%',mixBlendMode:'multiply' ,marginTop:'-2rem',marginLeft:'4rem'}} />
+        <img src={logo} alt="" className='header-img' style={{}} />
       </header>
     </div>
   )
