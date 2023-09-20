@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+:root{
+    --font-size-sm:clamp(.8rem,.17vw+.76rem,.89rem);
+    --font-size-base:clamp(1rem,.34vw+.91rem,1.19rem);
+    --font-size-md:clamp(1.25rem,0.61vw+1.1rem,1.58rem);
+    --font-size-lg:clamp(1.56rem,1vw+1.31rem,2.11rem);
+    --font-size-xl:clamp(1.95rem,1.56vw+1.56rem+2.81rem);
+    --font-size--xxl:clamp(2.44rem,2.38vw+1.85rem,3.75rem);
+    --font-size-xxxl: clamp(3.05rem,3.54vw+2.17rem,5rem)
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-size: var(--font-size-xxxl);
+}
+h2{
+    font-size: var(--font-size-xxl);
+}
+h3{
+    font-size: var(--font-size-xl);
+}
+h4{
+    font-size: var(--font-size-lg);
+}
+h5{
+    font-size: var(--font-size-md);
+}
+p{
+    font-size:var(--font-size-base) ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    
+    font-family:  Roboto;
+ 
+    background: rgb(244,244,244);
+    background: linear-gradient(145deg, rgba(244,244,244,1) 15%, rgba(67,172,226,1) 15%);
+    background-repeat: no-repeat;
+ 
+
+    
+
+   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4rem;
+    margin-right: 3rem;
+    
+    background: #f5f6fa;
+   
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.plancards{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(5rem,21rem));
+    gap: 2rem;
+    justify-content: center;
+   height: 25rem;
+   
+    width: auto;
+}
+.navbar{
+    margin-top: -6.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width:768px) {
+    .plancards{
+        display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(12rem,16rem));
+    gap: 7rem;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: auto;
+    }
 }
+@media (max-width:568px) {
+    .plancards{
+        display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(12rem,16rem));
+    gap: 7rem;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: auto;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    }
+}
+@media (max-width:320px) {
+    .plancards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(12rem,16rem));
+        gap: 7rem;
+        justify-content: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        width: auto;
+
+    }
 }
